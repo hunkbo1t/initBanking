@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="WARN">
+	<Property>
+		<Property name = "basePath">..\\initBanking\logs</Property>
+	</Property>
+  <Appenders>
+  		<RollingFile name = "File" filename = "${basePath}//loginTest001.log" filePattern = "${basePath}//app-%d{yyyy-MM-dd}.log">
+  		<PatternLayout pattern = "%d{HH:mm:ss.SSS} %-5level %c{1} -%mag%n"/>
+  			<Policies>
+  				<TimeBasedTriggringPolicy interval="1" modulate="true"/>
+  				<SizeBasedTriggringPolicy size="100 KB"/>
+  			</Policies>
+  		</RollingFile>
+    <Console name="Console">
+      <PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %c{1} - %msg%n"/>
+    </Console>
+  </Appenders>
+  <Loggers>
+    <Root level="tracer">
+      <AppenderRef ref="File"/>
+    </Root>
+  </Loggers>
+</Configuration>

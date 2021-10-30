@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="initBanking.v1">
+  <test thread-count="5" name="BankingApp">
+    <classes>
+      <class name="com.banking.testcases.TC001_LoginTestCases"/>
+      <!-- <class name="com.banking.testcases.BaseClass"/>-->
+    </classes>
+  </test> <!-- BankingApp -->
+</suite> <!-- initBanking.v1 -->
